@@ -125,6 +125,7 @@ body {
     --ibluevivid: #3367CF;
     --iwhite: #FFFFFF;
     --iblack: #000000;
+    --iblackalpha: #000000BB;
     --igray: #B3B3B3;
     --dark: #080808;
     --light: #E2E2E2;
@@ -3524,13 +3525,13 @@ footer .footer-social li:last-child {
 #go-top a {
     cursor: pointer;
     text-decoration: none;
-    border: 0 none;
+    border: solid #FFFFFF22 1px;
     display: block;
     height: 50px;
     width: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: var(--iblack);
+    background-color: var(--iblackalpha);
     color: var(--iwhite);
     text-align: center;
     text-transform: uppercase;
@@ -3548,13 +3549,13 @@ footer .footer-social li:last-child {
 }
 
 #go-top a:visited {
-    background: var(--iblack);
+    background: var(--iblackalpha);
     color: var(--iwhite);
 }
 
 #go-top a:hover,
 #go-top a:focus {
-    background: var(--iblack);
+    background: var(--iblackalpha);
     color: var(--iwhite);
 }
 
@@ -3582,7 +3583,7 @@ footer .footer-social li:last-child {
     min-height: 105px;
     max-width: calc(600px - 85px);
     min-width: calc(40vw - 85px);
-    background: var(--iblack);
+    background: var(--iblackalpha);
     padding: 20px;
     overflow-y: auto;
     overflow-x: hidden;
