@@ -29,7 +29,7 @@ menu:
       show-in-intro: true
     - name: "More"
       icon: "fa fa-plus-square"
-      url: "https://iaco.me"
+      url: "https://iaco.io"
       newtab: true
       show-in-intro: false
 

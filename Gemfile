@@ -19,6 +19,7 @@ group :jekyll_plugins do
     gem "kramdown", ">= 2.3.1"
     gem 'rouge'
     gem "nokogiri", ">= 1.11.0"
+    gem "jekyll-admin"
 end
 
 gem "webrick", "~> 1.7"
