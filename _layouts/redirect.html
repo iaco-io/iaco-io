@@ -1,0 +1,46 @@
+---
+title: "Redirect"
+layout: redirect
+permalink: "/redirect.html"
+---
+
+<!DOCTYPE HTML>
+
+{% if page.redirect %}
+<html>
+    <head>
+        <title>IΛCO VIVΛCI</title>
+        <meta http-equiv="refresh" content="0; url={{ page.redirect }}">
+        <script type="text/javascript"> window.location.href = "{{ page.redirect }}" </script>
+    </head>
+    <body>
+        If you are not redirected automatically, click this <a href="{{ page.redirect }}">link</a>.
+    </body>
+</html>
+
+{% else %}
+
+<html>
+    <head>
+        <title>IΛCO VIVΛCI</title>
+        <meta http-equiv="refresh" content="0; url=https://iaco.me">
+        <script type="text/javascript"> window.location.href = "https://iaco.me" </script>
+    </head>
+    <body>
+        If you are not redirected automatically, click this <a href="https://iaco.me">link</a>.
+    </body>
+</html>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+

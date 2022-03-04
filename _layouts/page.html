@@ -1,43 +1,24 @@
 ---
-layout: compress
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-  {% include head.html %}
 
-  <body class="site">
+<section>
+    <div class="section-title">
+        <h2><span>{{ page.title }}</span></h2>
+    </div>
 
-    {% if site.google_tag_manager %}
+    <div class="article-post">
+    {{content}}
+    </div>
 
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
+    {% if page.comments == true %}
+
+    <div id="comments" class="row mb-5">
+        <div class="col-md-8">
+            {% include disqus.html %}
+        </div>
+    </div>
 
     {% endif %}
-
-    {% include header.html %}
-
-    <div class="hero--small">
-      <div class="hero__wrap">
-        <h1 class="hero__title">{{ page.title }}</h1>
-      </div>
-    </div>
-    <main class="site__content">
-
-      <div class="container">
-        <div class="page-content">
-
-          {{ content }}
-
-        </div>
-      </div>
-
-    </main>
-
-    {% include footer.html %}
-
-  </body>
-
-</html>
+</section>

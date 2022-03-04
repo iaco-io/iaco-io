@@ -1,69 +1,83 @@
-# SITE CONFIGURATION
-title: IACO.io # your site title
-author: Iaco Vivaci # You :P
-description: > # Meta description of Homepage
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/iaco-io" # the subpath of your site, e.g. /blog
-url: "https://iaco.io" # the base hostname & protocol for your site, e.g. http://example.com
+# Site
+name: "IACO"
+title: "Lifestyles."
+description: "Build YOU."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: "/iaco-io"
+google_analytics: 'UA-158716451-1'
+# disqus: ''
+mailchimp-list: 'https://iaco.us18.list-manage.com/subscribe/post?u=82fec2178ac93f2d0f847d6fb&amp;id=61d5b52fe8'
+include: ["_pages"]
+permalink: /post/:title/
+future: false
 
-# SEO PLUGIN
-social:
-  name: Iaco Vivaci
-  links:
-    - https://twitter.com/IACO_io
-    - https://www.facebook.com/iago.profile
-    - https://www.linkedin.com/in/iago-me
-    - https://instagram.com/iaco.io
+# Authors
+authors:
+  iaco:
+    name: IACO VIVACI
+    display_name: IACO VIVACI
+    avatar: 'assets/images/avatar.png'
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: hi@iaco.mem
+    web: https://iaco.me
+    twitter: https://iaco.me/youtube
+    description: "I Care for Life"
 
-# THEME SETTINGS
-navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
+# Menu
+menu:
+    - name: "IACO.io"
+      icon: "fa fa-power-off"
+      url: "/"
+      newtab: false
+    - name: "YouTube"
+      icon: "fab fa-youtube"
+      url: "/youtube"
+      newtab: true
+    - name: "Instagram"
+      icon: "fab fa-instagram"
+      url: "/instagram"
+      newtab: true
 
-tagline: >
-  Modern Jekyll theme focused on speed performance &amp; SEO best practices
-
-hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
-
-email: hi@iaco.io # email for form submission
-
-twitter_username: IACO_io # replace with your_twitter_username or comment to remove link from footer
-github_username:  iaco-io # replace with your_github_username or comment to remove link from footer
-instagram_username: iaco.io # replace with your_instagram_username or comment to remove link from footer
-
-disqus:
-  shortname: janczizikow # to enable comments replace with your_disqus_shortname
-
-# google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
-
-service_worker: true
-
-# BUILD SETTINGS
-markdown: kramdown
-highlighter: rouge # or pygments or null
-# theme: jekyll-sleek # Uncomment if you're using the theme as a ruby gem
-exclude:
-  - README.md
-  - node_modules
-  - script
-  - package.json
-  - package-lock.json
-  - Gemfile
-  - Gemfile.lock
-  - vendor
-  - npm-debug.log
-  - gulpfile.js
-  - sleek.jpg
-
-include: ['_pages']
-permalink: /:title/
-
-compress_html:
-  clippings: all
-
+# Plugins
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-archives
+
+sass:
+  style: compact
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+# Pagination
+paginate: 6
+paginate_path: /post/page/:num/
+
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: ""
+adsense-data-ad-slot: ""
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
