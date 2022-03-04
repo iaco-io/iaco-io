@@ -80,7 +80,7 @@ In our lives there are things we want to do (because we like, or even love them 
 
 ## 5 tips
 
-![](/assets/images/default-bg.jpg "Test of Image")
+![]({{site.baseurl}}/assets/images/default-bg.jpg "Test of Image")
 
 The <h>5</h> tips to help you avoiding procrastination, managing your time and getting things done:
 - Your calendar reminds you about what you need to do;
