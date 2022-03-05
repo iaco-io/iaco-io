@@ -1852,6 +1852,10 @@ header .header-logo a {
     color: rgba(255, 255, 255, 0.35);
 }
 
+.home-content-tablecell .home-bottom-text {
+    padding-top: 60px;
+}
+
 .scroll-icon {
     opacity: 1;
     position: absolute;
